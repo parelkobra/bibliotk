@@ -1,0 +1,270 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,600');
+@import 'node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap-sass/assets/stylesheets/bootstrap';
+//@import "bootstrap-theme";
+@import '~bootstrap-select/sass/bootstrap-select';
+
+@import '~datatables.net-dt/css/jquery.dataTables.css';
+
+// Otras propias
+@import 'mixins';
+@import 'layout';
+@import 'typography';
+@import 'ui';
+@import 'navigation';
+@import 'forms';
+@import 'login';
+
+@include fontface('fontawesome', '../fonts/fontawesome-webfont');
+
+.fa {
+  font-family: 'fontawesome';
+}
+
+.bg-white {
+  @include background-white();
+}
+
+.text-grey {
+  @include text-grey();
+}
+
+.bold {
+  @include bold();
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container,
+.container-fluid {
+  margin-bottom: 30px;
+}
+
+.logo-big {
+    margin: 20px 0;
+}
+
+.logo-small {
+    width: 160px;
+}
+
+.profiles {
+    text-align: center;
+
+    & > .col-md-3 {
+        float: none;
+        display: inline-block;
+        text-align: left;
+        width: calc(25% - 4px);
+        padding-right: 12px;
+        padding-left: 12px;
+
+        @media (max-width: $screen-sm-min) {
+            display: block;
+            width: auto;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+    }
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.3rem;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    padding: 1.25rem;
+    font-size: 2rem;
+    z-index: 10;
+}
+
+.card-body-icon {
+    position: absolute;
+    z-index: 0;
+    top: -4rem;
+    right: -2rem;
+    opacity: 0.3;
+    font-size: 12rem;
+}
+
+.card-footer {
+    padding: 0.75rem 1.25rem;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+    z-index: 20;
+
+    a {
+        color: #fff;
+    }
+
+    a:hover {
+        color: #8bf;
+        text-decoration: underline;
+    }
+}
+
+.card-edit {
+    margin-top: -10px;
+}
+
+.img-profile {
+    display: inline-block;
+    height: 48px;
+    font-size: 3.6rem;
+    background-color: $brand-primary;
+    border-radius: 0.3rem;
+    padding: 0 1px;
+    color: white;
+}
+
+.radio-profile {
+    input {
+        width: 47px;
+    }
+}
+
+#myCarousel {
+    height: 260px;
+    background-color: rgba(220, 220, 220, 0.5);
+}
+
+.carousel-control {
+    width: 8%;
+}
+
+.carousel-indicators {
+    bottom: 0;
+}
+
+.carousel-inner {
+    height: 260px;
+
+    p {
+        margin-left: 20px;
+
+        small {
+            display: block;
+        }
+    }
+}
+
+.item {
+    height: 260px;
+    padding: 0;
+    margin: 0;
+
+    & > div {
+        filter: blur(2px) opacity(70%) grayscale(50%);
+        height: 260px;
+        z-index: 90;
+    }
+
+    & > p {
+        position: absolute;
+        z-index: 100;
+        text-shadow: 1px 1px 1px #fff;
+    }
+}
+
+.item > p.h1 {
+    margin-top: -100px;
+    margin-left: 20px;
+}
+
+.item > p.h3 {
+    margin-top: -100px;
+    margin-left: 20px;
+}
+
+.item > p.h3 small {
+    color: #333;
+    display: block;
+}
+
+.categories, .news, .options {
+    margin-bottom: 30px;
+
+    h2 {
+        text-transform: none;
+    }
+}
+
+.category {
+    height: 120px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    margin: 4px;
+    width: calc(16.66% - 8px);
+    border-radius: 5px;
+    font-size: 3.5rem;
+    text-align: center;
+    overflow: hidden;
+
+    div {
+        margin-left: -5px;
+        //transform: rotateZ(-25deg);
+        //margin-top: 28%;
+        color: rgba(255, 255, 255, 0.4);
+    }
+
+    @media (max-width: $screen-sm-min) {
+        width: calc(33.33% - 8px);
+    }
+
+    @media (max-width: $screen-xs-min) {
+        width: calc(50% - 8px);
+    }
+}
+
+.book {
+    div {
+        background-color: rgba(255, 255, 255, 0.4);
+
+        h5 {
+            text-transform: none;
+            padding: 5px;
+
+            @include textshadow(1px, 1px, 1px, #fff);
+
+            small {
+                display: block;
+            }
+        }
+    }
+}
+
+.spacing {
+    padding-bottom: 50px;
+    padding-top: 10px;
+}
+
+.searchBar {
+    width: 300px;
+    margin: 10px;
+    margin-left: 13px;
+}

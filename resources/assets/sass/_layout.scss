@@ -1,0 +1,316 @@
+html {
+    font-size: 62.5%;
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    font-size: 14px;
+    font-size: 1.4rem;
+    background: #ddd;
+}
+
+html, body {
+    height: 100%;
+    min-height: 100%;
+}
+
+.header {
+    margin-bottom: 1rem;
+    position: fixed;
+    width: 100%;
+    min-width: 600px;
+    z-index: 2000;
+
+    .top-bar {
+        background: $gray-lighter;
+    }
+
+    .header-top {
+        background-position-x: 0%;
+        background-position-y: 0%;
+        background-position: center;
+        background-size: cover;
+        width: calc(100% - 240px);
+        padding: 20px;
+
+        @media (max-width: $screen-md-max) {
+            width: 100%;
+            padding: 10px 0 0 0;
+        }
+
+        @media (min-width: $screen-md-min) {
+            width: 100%;
+        }
+
+        @media (min-width: $screen-xl-min) {
+            width: calc(100% - 120px);
+        }
+
+        @media (min-width: $screen-xxl-min) {
+            width: calc(100% - 240px);
+        }
+    }
+
+    .navbar {
+        border-radius: 0 !important;
+    }
+
+    nav {
+        width: 100%;
+        position: absolute;
+        left: 0;
+    }
+
+    .logo {
+        text-align: center;
+        margin-bottom: 2rem;
+
+        h1 {
+            display: none;
+        }
+
+        img {
+            width: 260px;
+
+            @media (min-width: $screen-sm-min) {
+                margin-left: 1.6rem;
+            }
+        }
+
+        @media (min-width: $screen-sm-min) {
+            text-align: left;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.wrapper {
+    display: block;
+    margin: {
+        top: 2rem;
+    }
+
+    &::after {
+        content: "";
+        background: url("../images/general/bg-login.jpg") center center no-repeat;
+        background-size: cover;
+        filter: blur(3px);
+        transform: scale(1.1);
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: fixed;
+        z-index: -1;
+    }
+
+    &.login {
+        min-height: 100%;
+
+        .content-wrapper {
+            min-height: 750px;
+        }
+    }
+}
+
+.content-wrapper {
+    height: 100%;
+    min-height: calc(100vh - 118px);
+    padding-bottom: 6rem;
+    min-width: 600px;
+}
+
+.wrapper.users {
+    margin: {
+        top: 0;
+        bottom: 0;
+    }
+
+    overflow: hidden;
+
+    &::after {
+        content: "";
+        background: linear-gradient(
+            to bottom, 
+            rgba(221, 221, 221, 1) 14%,
+            rgba(221, 221, 221, 0.7) 20%,
+            rgba(221, 221, 221, 0.7) 74%,
+            rgba(221, 221, 221, 1) 80%), 
+            url("../images/general/bg-hall.jpg") center center no-repeat;
+        background-size: cover;
+        filter: blur(3px);
+        transform: scale(1.1);
+    }
+
+    h2, h4 small {
+        @include textshadow(1px, 1px, 2px, #ddd);
+    }
+}
+
+.wrapper.home {
+    margin: {
+        top: 0;
+        bottom: 0;
+    }
+
+    overflow: hidden;
+
+    .container-fluid {
+        padding-right: 0;
+        padding-left: 0;
+
+        .jumbotron {
+            text-transform: none;
+            background: none;
+
+            @media (max-width: $screen-sm-min) {
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 4em;
+                text-transform: none;
+            }
+
+            h2 {
+                color: $brand-primary;
+                text-transform: none;
+            }
+
+            p {
+                text-align: left;
+                color: #333;
+                font-size: 1.2em;
+                text-align: justify;
+                margin-top: 20px;
+            }
+        }
+    }
+
+    &::after {
+        content: "";
+        background: rgba(221, 221, 221, 1);
+    }
+
+    & > .section:first-child > .row {
+        margin-top: 50px; 
+        margin-left: 225px;
+    }
+
+    & > .section > .row {
+        margin-left: 200px;
+    }
+
+    @media (max-width: $screen-sm-min) {
+        & > .section:first-child > .row {
+            margin-left: 0px;
+        }
+    
+        & > .section > .row {
+            margin-left: 0px;
+        }
+    }
+}
+
+@media (min-width: $screen-md-min) {
+    .pull-left-md {
+        float: left;
+    }
+
+    .pull-right-md {
+        float: right;
+    }
+}
+
+.panel-body {
+    @media (max-width: $screen-md-max) {
+        padding: 6px;
+    }
+}
+
+#paneles .row .col-sm-12 {
+    @media (max-width: $screen-md-max) {
+        padding: 0; 
+    }
+}
+
+.row {
+    @media (max-width: $screen-md-max) {
+        margin: {
+            left: 0;
+            right: 0;
+        }
+    }
+}
+
+.row-title {
+    margin: 0 8px 8px;
+    text-align: center;
+    padding: 2px;
+    color: #999;
+    border-bottom: #bbb 2px dashed;
+    
+    font: {
+        weight: normal;
+        size: 1.6em;
+        transform: uppercase;
+    }
+}
+
+.info-box {
+    border: 1px lighten($gray-light, 20%) solid;
+    padding: 2rem;
+}
+
+.modal-title {
+    color: $brand-primary;
+}   
+
+.modal-header {
+    border-bottom: 1px solid $brand-primary;
+}
+
+.modal-footer {
+    border-top: 1px solid $brand-primary;
+}
+
+.modal-dialog {
+    overflow-y: initial !important;
+    margin: 30px auto;
+}
+
+.modal-body {
+    max-height: calc(100vh - 210px);
+    overflow-y: auto;
+    min-height: 90px;
+
+    .row > .col-sm-6 {
+        border-bottom: 1px dashed #ccc;
+    }
+
+    .row > .col-sm-5 .field-name {
+        width: 30%;
+    }
+
+    .row > .col-sm-5 .field-value {
+        width: 70%;
+    }
+
+    .planes {
+        border-radius: 7px;
+        border: #fff 2px solid;
+
+        .col-md-1 {
+            padding: 18px;
+        }
+
+        .col-md-3 {
+            padding: 14px;
+        }
+    }
+}
+
+.modal-profile {
+    padding-bottom: 50px;
+}

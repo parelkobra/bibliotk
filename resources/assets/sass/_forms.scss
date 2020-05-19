@@ -1,0 +1,127 @@
+    
+.form-group {
+    margin: 15px 4px;
+}
+
+.field-group {
+    margin-bottom: 2rem;
+    label {
+        display: block;
+
+        &.disabled {
+            color: darken(#ccc, 10%);
+        }
+    }
+}
+
+.buscar {
+    text-align: right;
+}
+
+.buscar > ul {
+    list-style: none;
+    display: flex;
+    
+    li {
+        display: inline-block;
+        flex: 1;
+        text-align: left;
+        color: #999;
+    }
+
+    li > h3 {
+        margin-bottom:-16px; 
+        color:#ccc;
+    }
+
+    li > label {
+        display: block;
+        margin: 10px 0 0 0;
+    }
+
+    li > input,
+    li > select {
+        width: calc(100% - 20px) !important;
+    }
+}
+
+.btn.outline {
+    background: none;
+    padding: 6px 22px;
+}
+
+.btn-primary.outline {
+    border: 2px solid #dd0e19;
+    color: #dd0e19;
+}
+
+.btn-primary.outline:hover,
+.btn-primary.outline:focus,
+.btn-primary.outline:active,
+.btn-primary.outline.active,
+.open > .dropdown-toggle.btn-primary {
+    color: #428bca;
+    border-color: #428bca;
+}
+
+.btn-edit {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 50%;
+    padding: 8px 7px;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    text-align: right;
+    font-size: 32px;
+}
+
+.btn-edit:hover {
+    color: #fff;
+}
+
+.detail-box .field.input {
+    padding-top: 4px;
+}
+
+.input-group-addon i {
+    width: 16px;
+}
+
+.checkbox {
+    margin-top: 0;
+}
+
+form div > label {
+    margin: 12px 0 6px 6px;
+}
+
+#procesando-envio, .procesando-envio {
+    float: left;
+    margin: auto;
+    transform: translateY(50%);
+    font-size: 1.1em;
+}
+
+#adjuntar-archivo-img, #adjuntar-archivo-pdf {
+    background: rgba(200, 90, 0, 0.05);
+    border: 2px dashed #888;
+    margin: 0 auto;
+    line-height: 50px;
+    text-align: center;
+    height: 70px;
+    width: 100%;
+    color: #888;
+    font-size: 1.2em;
+    border-radius: 9px;
+    display: inline-block;
+}
+
+#adjuntar-archivo-img.highlight, #adjuntar-archivo-pdf.highlight {
+    background: rgba(200, 120, 0, 0.1);
+    border-color: #994;
+    color: #994;
+}
+
+#adjuntar-archivo-drop-img, #adjuntar-archivo-drop-pdf {
+    display: none;
+}

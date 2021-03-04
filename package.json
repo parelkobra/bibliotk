@@ -33,7 +33,7 @@
     },
     "dependencies": {
         "bootstrap-select": "^1.13.10",
-        "datatables.net": "1.10.19",
+        "datatables.net": "1.10.22",
         "datatables.net-dt": "1.10.19"
     },
     "keywords": [],
